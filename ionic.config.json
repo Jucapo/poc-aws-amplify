@@ -1,0 +1,7 @@
+{
+  "name": "poc-amplify",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
