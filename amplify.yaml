@@ -1,0 +1,21 @@
+backend:
+  phases:
+    build:
+      commands:
+        - npm ci
+        - amplify pipeline-deploy
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: www
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
